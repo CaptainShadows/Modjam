@@ -16,4 +16,9 @@ public class Registry {
 
 	public static final String ClientProxy = sided + "ClientProxy";
 	public static final String ServerProxy = sided + "ServerProxy";
+	
+	// ********************************Blocks**********************************
+	
+	public static final String coolerUnloc = "Cooler";
+	
 }

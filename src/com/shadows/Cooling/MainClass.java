@@ -1,6 +1,8 @@
 package com.shadows.Cooling;
 
 import com.shadows.Cooling.sided.ServerProxy;
+import com.shadows.Cooling.utils.Config;
+import com.shadows.Cooling.utils.Handler;
 import com.shadows.Cooling.utils.Registry;
 
 import cpw.mods.fml.common.Mod;
@@ -25,6 +27,12 @@ public class MainClass {
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event) {
 
+		boolean modLoaded = Handler.isModLoaded();
+
+		if (modLoaded == false) {
+			Config.init(event);
+			Handler.LoadMod();
+		}
 	}
 
 	@Init
