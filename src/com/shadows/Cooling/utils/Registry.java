@@ -12,6 +12,7 @@ public class Registry {
 	// ********************************Locations********************************
 
 	public static final String sided = "com.shadows.Cooling.sided.";
+	public static final String texture = "Cooling:";
 
 	// *********************************Proxies********************************
 
