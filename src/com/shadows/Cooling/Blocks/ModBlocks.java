@@ -10,8 +10,7 @@ public class ModBlocks {
 
 	public static void init() {
 
-		ModBlocks.cooler = (new coolerBlock(Config.coolerID, false))
-				.setUnlocalizedName("cooler").setCreativeTab(
-						CreativeTabs.tabDecorations);
+		cooler = new coolerBlock(Config.coolerID, false).setUnlocalizedName(
+				"cooler").setCreativeTab(CreativeTabs.tabDecorations);
 	}
 }
