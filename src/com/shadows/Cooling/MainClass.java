@@ -1,5 +1,6 @@
 package com.shadows.Cooling;
 
+import com.shadows.Cooling.Blocks.ModBlocks;
 import com.shadows.Cooling.sided.ServerProxy;
 import com.shadows.Cooling.utils.Config;
 import com.shadows.Cooling.utils.Handler;
@@ -14,8 +15,10 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkMod;
 
 @Mod(modid = Registry.id, name = Registry.name, version = Registry.ver)
+@NetworkMod(channels = { Registry.channel }, clientSideRequired = true, serverSideRequired = false)
 public class MainClass {
 
 	@Instance(Registry.id)
@@ -37,6 +40,10 @@ public class MainClass {
 
 	@Init
 	public void load(FMLInitializationEvent event) {
+
+		ModBlocks.init();
+
+		Handler.init();
 
 	}
 
