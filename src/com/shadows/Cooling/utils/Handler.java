@@ -52,4 +52,12 @@ public class Handler {
 	public static void UnLoadMod() {
 		IsLoaded = false;
 	}
+	
+	public static void log(String s) {
+		System.out.println(s);
+	}
+	
+	public static void logName(String s) {
+		System.out.println(Registry.name + " " + s);
+	}
 }

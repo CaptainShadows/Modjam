@@ -18,7 +18,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
 @Mod(modid = Registry.id, name = Registry.name, version = Registry.ver)
-@NetworkMod(channels = { Registry.channel }, clientSideRequired = true, serverSideRequired = false)
+@NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class MainClass {
 
 	@Instance(Registry.id)
@@ -33,7 +33,10 @@ public class MainClass {
 		boolean modLoaded = Handler.isModLoaded();
 
 		if (modLoaded == false) {
+			
+			Handler.logName("is Loading it's configuration");
 			Config.init(event);
+			
 			Handler.LoadMod();
 		}
 	}
@@ -42,9 +45,9 @@ public class MainClass {
 	public void load(FMLInitializationEvent event) {
 
 		ModBlocks.init();
-
+		
+		Handler.logName("is Loading it's Recipies");
 		Handler.init();
-
 	}
 
 	@PostInit

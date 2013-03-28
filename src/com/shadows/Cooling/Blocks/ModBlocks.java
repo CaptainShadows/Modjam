@@ -12,5 +12,6 @@ public class ModBlocks {
 
 		cooler = new coolerBlock(Config.coolerID, false).setUnlocalizedName(
 				"cooler").setCreativeTab(CreativeTabs.tabDecorations);
+
 	}
 }
