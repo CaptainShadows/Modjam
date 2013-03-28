@@ -21,7 +21,7 @@ public class ServerProxy {
 
 		if (ID == Registry.CoolerID) {
 			TECooler CoolerTE = (TECooler) world.getBlockTileEntity(x, y, z);
-			return new CoolerC(player.inventory, TECooler);
+			return new CoolerC(player.inventory, CoolerTE);
 		}
 
 		return null;
@@ -32,7 +32,7 @@ public class ServerProxy {
 
 		if (ID == Registry.CoolerID) {
 			TECooler CoolerTE = (TECooler) world.getBlockTileEntity(x, y, z);
-			return new GUICooler(player.inventory, TECooler);
+			return new GUICooler(player.inventory, CoolerTE);
 		}
 		return null;
 	}
