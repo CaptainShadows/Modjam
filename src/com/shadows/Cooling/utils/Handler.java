@@ -53,7 +53,7 @@ public class Handler {
 		IsLoaded = false;
 	}
 	
-	public static void log(String s) {
+	public static void log(Object s) {
 		System.out.println(s);
 	}
 	

@@ -3,6 +3,7 @@ package com.shadows.Cooling;
 import com.shadows.Cooling.Blocks.ModBlocks;
 import com.shadows.Cooling.sided.ServerProxy;
 import com.shadows.Cooling.utils.Config;
+import com.shadows.Cooling.utils.FuelHandler;
 import com.shadows.Cooling.utils.Handler;
 import com.shadows.Cooling.utils.Registry;
 
@@ -16,6 +17,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = Registry.id, name = Registry.name, version = Registry.ver)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
@@ -33,10 +35,10 @@ public class MainClass {
 		boolean modLoaded = Handler.isModLoaded();
 
 		if (modLoaded == false) {
-			
+
 			Handler.logName("is Loading it's configuration");
 			Config.init(event);
-			
+
 			Handler.LoadMod();
 		}
 	}
@@ -45,9 +47,11 @@ public class MainClass {
 	public void load(FMLInitializationEvent event) {
 
 		ModBlocks.init();
-		
+
 		Handler.logName("is Loading it's Recipies");
 		Handler.init();
+
+		GameRegistry.registerFuelHandler(new FuelHandler());
 	}
 
 	@PostInit

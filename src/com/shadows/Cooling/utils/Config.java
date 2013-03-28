@@ -8,12 +8,14 @@ import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class Config {
-		
+
 	public static int coolerID;
-	
+
 	public static void init(FMLPreInitializationEvent event) {
+
 		File configFile = new File(event.getModConfigurationDirectory(),
 				Registry.name + ".cfg");
+
 		Configuration configuration = new Configuration(configFile);
 
 		try {
