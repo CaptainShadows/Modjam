@@ -7,7 +7,7 @@ import net.minecraft.nbt.NBTTagList;
 
 import com.shadows.Cooling.utils.Registry;
 
-public class TECooler extends ModTE implements IInventory {
+public class TECooler extends ModTE implements IInventory{
 
 	/**
 	 * The ItemStacks that hold the items currently being used in the Cooler
