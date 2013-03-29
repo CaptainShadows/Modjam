@@ -22,6 +22,5 @@ public class ModBlocks {
 				.setLightValue(0.875F);
 
 		GameRegistry.registerBlock(ModBlocks.coolerIdle, Registry.coolerUnloc);
-
 	}
 }

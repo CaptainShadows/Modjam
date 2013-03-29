@@ -7,9 +7,7 @@ public class Handler {
 	private static boolean IsLoaded = false;
 
 	public static void init() {
-
 		Recipes();
-
 	}
 
 	// ****************************Adding Recipies**********************
