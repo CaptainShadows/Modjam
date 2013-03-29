@@ -1,4 +1,4 @@
-package Cooling;
+package Cooling.utils;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -13,8 +13,8 @@ public class CoolerRecipes {
 	private static final CoolerRecipes CoolingBase = new CoolerRecipes();
 
 	/** The list of Cooling results. */
-	private Map CoolingList = new HashMap();
-	private Map experienceList = new HashMap();
+    private Map<Integer, ItemStack> CoolingList = new HashMap<Integer, ItemStack>();
+	private Map<Integer, Float> experienceList = new HashMap<Integer, Float>();
 	private HashMap<List<Integer>, ItemStack> metaCoolingList = new HashMap<List<Integer>, ItemStack>();
 	private HashMap<List<Integer>, Float> metaExperience = new HashMap<List<Integer>, Float>();
 
@@ -41,7 +41,7 @@ public class CoolerRecipes {
 				Float.valueOf(par3));
 	}
 
-	public Map getCoolingList() {
+	public Map<Integer, ItemStack> getCoolingList() {
 		return this.CoolingList;
 	}
 
