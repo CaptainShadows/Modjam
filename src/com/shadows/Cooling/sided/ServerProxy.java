@@ -12,6 +12,10 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ServerProxy {
 
+	public void init(){
+		
+	}
+	
 	public void initTE() {
 		GameRegistry.registerTileEntity(TECooler.class, Registry.CoolerTE);
 	}
