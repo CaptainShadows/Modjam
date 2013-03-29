@@ -1,15 +1,10 @@
 package com.shadows.Cooling.TE;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
-import net.minecraft.item.ItemTool;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
@@ -238,7 +233,7 @@ public class TECooler extends TileEntity implements ISidedInventory {
 		}
 
 		if (!this.worldObj.isRemote) {
-			if (this.coolerBurnTime == 0 && this.canSmelt()) {
+			if (this.coolerBurnTime == 0 && this.canCool()) {
 				this.currentItemBurnTime = this.coolerBurnTime = getItemBurnTime(this.coolerItemStacks[1]);
 
 				if (this.coolerBurnTime > 0) {
@@ -256,12 +251,12 @@ public class TECooler extends TileEntity implements ISidedInventory {
 				}
 			}
 
-			if (this.isBurning() && this.canSmelt()) {
+			if (this.isBurning() && this.canCool()) {
 				++this.coolerCookTime;
 
 				if (this.coolerCookTime == 200) {
 					this.coolerCookTime = 0;
-					this.smeltItem();
+					this.coolItem();
 					flag1 = true;
 				}
 			} else {
@@ -284,7 +279,7 @@ public class TECooler extends TileEntity implements ISidedInventory {
 	 * Returns true if the cooler can smelt an item, i.e. has a source item,
 	 * destination stack isn't full, etc.
 	 */
-	private boolean canSmelt() {
+	private boolean canCool() {
 		if (this.coolerItemStacks[0] == null) {
 			return false;
 		} else {
@@ -306,8 +301,8 @@ public class TECooler extends TileEntity implements ISidedInventory {
 	 * Turn one item from the cooler source stack into the appropriate smelted
 	 * item in the cooler result stack
 	 */
-	public void smeltItem() {
-		if (this.canSmelt()) {
+	public void coolItem() {
+		if (this.canCool()) {
 			ItemStack itemstack = CoolerRecipes.Cooling().getCoolingResult(
 					this.coolerItemStacks[0]);
 
@@ -336,38 +331,12 @@ public class TECooler extends TileEntity implements ISidedInventory {
 			int i = par0ItemStack.getItem().itemID;
 			Item item = par0ItemStack.getItem();
 
-			if (par0ItemStack.getItem() instanceof ItemBlock
-					&& Block.blocksList[i] != null) {
-				Block block = Block.blocksList[i];
-
-				if (block == Block.woodSingleSlab) {
-					return 150;
-				}
-
-				if (block.blockMaterial == Material.wood) {
-					return 300;
-				}
-			}
-
-			if (item instanceof ItemTool
-					&& ((ItemTool) item).getToolMaterialName().equals("WOOD"))
-				return 200;
-			if (item instanceof ItemSword
-					&& ((ItemSword) item).getToolMaterialName().equals("WOOD"))
-				return 200;
-			if (item instanceof ItemHoe
-					&& ((ItemHoe) item).func_77842_f().equals("WOOD"))
-				return 200;
-			if (i == Item.stick.itemID)
-				return 100;
-			if (i == Item.coal.itemID)
-				return 1600;
-			if (i == Item.bucketLava.itemID)
-				return 20000;
-			if (i == Block.sapling.blockID)
-				return 100;
-			if (i == Item.blazeRod.itemID)
+			if (i == Item.snowball.itemID)
+				return 400;
+			if (i == Block.snow.blockID)
 				return 2400;
+			if (i == Block.ice.blockID)
+				return 4200;
 			return GameRegistry.getFuelValue(par0ItemStack);
 		}
 	}
