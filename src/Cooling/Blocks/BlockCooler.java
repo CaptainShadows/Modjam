@@ -50,8 +50,8 @@ public class BlockCooler extends MainBlock {
 
                 if (tileCalcinator != null){
                     player.openGui(MainClass.instance,
-                            Registry.CoolerID, world, x,
-                            y, z);
+                            Registry.CoolerID, world, x, y,
+                            z);
                 }
             }
 

@@ -10,7 +10,7 @@ import Cooling.MainClass;
 import cpw.mods.fml.common.network.Player;
 
 public class PacketTileUpdate extends MainPacket {
-   
+
     public int x, y, z;
     public byte orientation;
     public short state;
@@ -70,5 +70,4 @@ public class PacketTileUpdate extends MainPacket {
                 ForgeDirection.getOrientation(orientation),
                 state, owner, customName);
     }
-
 }

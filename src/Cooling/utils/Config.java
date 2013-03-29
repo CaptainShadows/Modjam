@@ -9,28 +9,34 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class Config {
 
-	public static int coolerID;
+    public static int coolerID;
 
-	public static void init(FMLPreInitializationEvent event) {
+    public static void init(FMLPreInitializationEvent event) {
 
-		File configFile = new File(event.getModConfigurationDirectory(),
-				Registry.name + ".cfg");
+        File configFile = new File(
+                event.getModConfigurationDirectory(),
+                Registry.name + ".cfg");
 
-		Configuration configuration = new Configuration(configFile);
+        Configuration configuration = new Configuration(
+                configFile);
 
-		try {
-			configuration.load();
+        try{
+            configuration.load();
 
-			// *************************Block config's***********************
+            // *************************Block config's***********************
 
-			coolerID = configuration.getBlock("Cooler Block", 900,
-					"Cooler Block Id:").getInt();
+            coolerID = configuration
+                    .getBlock("Cooler Block", 900,
+                            "Cooler Block Id:").getInt();
 
-		} catch (Exception e) {
-			FMLLog.log(Level.SEVERE, e, Registry.name
-					+ " has had a problem loading its configuration");
-		} finally {
-			configuration.save();
-		}
-	}
+        }catch(Exception e){
+            FMLLog.log(
+                    Level.SEVERE,
+                    e,
+                    Registry.name
+                            + " has had a problem loading its configuration");
+        }finally{
+            configuration.save();
+        }
+    }
 }

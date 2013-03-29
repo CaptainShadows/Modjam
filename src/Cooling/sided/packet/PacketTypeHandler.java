@@ -8,9 +8,9 @@ import net.minecraft.network.packet.Packet250CustomPayload;
 import Cooling.utils.Registry;
 
 public enum PacketTypeHandler {
-    
+
     TILE(PacketTileUpdate.class);
-    
+
     private Class<? extends MainPacket> clazz;
 
     PacketTypeHandler(Class<? extends MainPacket> clazz) {
@@ -20,16 +20,16 @@ public enum PacketTypeHandler {
 
     public static MainPacket buildPacket(byte[] data) {
 
-        ByteArrayInputStream bis = new ByteArrayInputStream(data);
+        ByteArrayInputStream bis = new ByteArrayInputStream(
+                data);
         int selector = bis.read();
         DataInputStream dis = new DataInputStream(bis);
 
         MainPacket packet = null;
 
-        try {
+        try{
             packet = values()[selector].clazz.newInstance();
-        }
-        catch (Exception e) {
+        }catch(Exception e){
             e.printStackTrace(System.err);
         }
 
@@ -38,14 +38,15 @@ public enum PacketTypeHandler {
         return packet;
     }
 
-    public static MainPacket buildPacket(PacketTypeHandler type) {
+    public static MainPacket buildPacket(
+            PacketTypeHandler type) {
 
         MainPacket packet = null;
 
-        try {
-            packet = values()[type.ordinal()].clazz.newInstance();
-        }
-        catch (Exception e) {
+        try{
+            packet = values()[type.ordinal()].clazz
+                    .newInstance();
+        }catch(Exception e){
             e.printStackTrace(System.err);
         }
 
@@ -65,4 +66,3 @@ public enum PacketTypeHandler {
         return packet250;
     }
 }
-

@@ -14,15 +14,15 @@ public class CoolerC extends Container {
     public CoolerC(InventoryPlayer inventoryPlayer,
             TECooler calcinator) {
 
-        // Add the calcinator "to be calcined" slot to the container
+        // Add the Cooler "to be cooled" slot to the container
         this.addSlotToContainer(new Slot(calcinator, 0, 56,
                 17));
 
-        // Add the calcinator fuel slot to the container
+        // Add the Cooler fuel slot to the container
         this.addSlotToContainer(new Slot(calcinator, 1, 56,
                 62));
 
-        // Add the calcined results slot to the container
+        // Add the Cooler results slot to the container
         this.addSlotToContainer(new SlotCooler(calcinator,
                 2, 116, 35));
 
@@ -104,8 +104,6 @@ public class CoolerC extends Container {
 
             var4.onPickupFromSlot(par1EntityPlayer, var5);
         }
-
         return var3;
     }
-
 }

@@ -20,38 +20,38 @@ import cpw.mods.fml.common.network.NetworkMod;
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class MainClass {
 
-	@Instance(Registry.id)
-	public static MainClass instance;
+    @Instance(Registry.id)
+    public static MainClass instance;
 
-	@SidedProxy(clientSide = Registry.ClientProxy, serverSide = Registry.ServerProxy)
-	public static ServerProxy proxy;
+    @SidedProxy(clientSide = Registry.ClientProxy, serverSide = Registry.ServerProxy)
+    public static ServerProxy proxy;
 
-	@PreInit
-	public void preInit(FMLPreInitializationEvent event) {
+    @PreInit
+    public void preInit(FMLPreInitializationEvent event) {
 
-		boolean modLoaded = Handler.isModLoaded();
+        boolean modLoaded = Handler.isModLoaded();
 
-		if (modLoaded == false) {
+        if (modLoaded == false){
 
-			Handler.logName("is Loading it's configuration");
-			Config.init(event);
+            Handler.logName("is Loading it's configuration");
+            Config.init(event);
 
-			Handler.LoadMod();
-		}
-	}
+            Handler.LoadMod();
+        }
+    }
 
-	@Init
-	public void load(FMLInitializationEvent event) {
+    @Init
+    public void load(FMLInitializationEvent event) {
 
-		ModBlocks.init();
+        ModBlocks.init();
 
-		Handler.logName("is Loading it's Recipies");
-		Handler.init();
+        Handler.logName("is Loading it's Recipies");
+        Handler.init();
 
-	}
+    }
 
-	@PostInit
-	public void postInit(FMLPostInitializationEvent event) {
+    @PostInit
+    public void postInit(FMLPostInitializationEvent event) {
 
-	}
+    }
 }
