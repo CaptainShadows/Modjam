@@ -2,6 +2,7 @@ package com.shadows.Cooling.inv;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.ContainerFurnace;
 import net.minecraft.util.StatCollector;
 
 import org.lwjgl.opengl.GL11;
@@ -20,8 +21,7 @@ public class GUICooler extends GuiContainer {
 	public GUICooler(InventoryPlayer player, TECooler coolerTE) {
 
 		super(new CoolerC(player, coolerTE));
-		ySize = 176;
-		this.CoolerTE = coolerTE;
+        this.CoolerTE = coolerTE;
 	}
 
 	@Override
