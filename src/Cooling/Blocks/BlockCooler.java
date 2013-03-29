@@ -1,4 +1,4 @@
-package com.shadows.Cooling.Blocks;
+package Cooling.Blocks;
 
 import java.util.Random;
 
@@ -17,10 +17,8 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-
-import com.shadows.Cooling.TE.TECooler;
-import com.shadows.Cooling.utils.Registry;
-
+import Cooling.TE.TECooler;
+import Cooling.utils.Registry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

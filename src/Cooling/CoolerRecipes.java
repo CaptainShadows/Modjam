@@ -1,4 +1,4 @@
-package com.shadows.Cooling;
+package Cooling;
 
 import java.util.Arrays;
 import java.util.HashMap;

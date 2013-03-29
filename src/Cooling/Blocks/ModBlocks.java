@@ -1,11 +1,9 @@
-package com.shadows.Cooling.Blocks;
+package Cooling.Blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
-
-import com.shadows.Cooling.utils.Config;
-import com.shadows.Cooling.utils.Registry;
-
+import Cooling.utils.Config;
+import Cooling.utils.Registry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModBlocks {

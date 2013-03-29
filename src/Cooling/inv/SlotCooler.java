@@ -1,4 +1,4 @@
-package com.shadows.Cooling.inv;
+package Cooling.inv;
 
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;

@@ -1,12 +1,11 @@
-package com.shadows.Cooling;
+package Cooling;
 
-import com.shadows.Cooling.Blocks.ModBlocks;
-import com.shadows.Cooling.sided.ServerProxy;
-import com.shadows.Cooling.utils.Config;
-import com.shadows.Cooling.utils.FuelHandler;
-import com.shadows.Cooling.utils.Handler;
-import com.shadows.Cooling.utils.Registry;
-
+import Cooling.Blocks.ModBlocks;
+import Cooling.sided.ServerProxy;
+import Cooling.utils.Config;
+import Cooling.utils.FuelHandler;
+import Cooling.utils.Handler;
+import Cooling.utils.Registry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;

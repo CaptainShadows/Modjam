@@ -1,21 +1,19 @@
-package com.shadows.Cooling.sided;
+package Cooling.sided;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
-
-import com.shadows.Cooling.TE.TECooler;
-import com.shadows.Cooling.inv.CoolerC;
-import com.shadows.Cooling.inv.GUICooler;
-import com.shadows.Cooling.utils.Registry;
-
+import Cooling.TE.TECooler;
+import Cooling.inv.CoolerC;
+import Cooling.inv.GUICooler;
+import Cooling.utils.Registry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ServerProxy {
 
-	public void init(){
-		
+	public void init() {
+
 	}
-	
+
 	public void initTE() {
 		GameRegistry.registerTileEntity(TECooler.class, Registry.CoolerTE);
 	}

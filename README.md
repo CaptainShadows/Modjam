@@ -1,3 +1,3 @@
-Modjam
+Modjam Mod
 
-My mod the ModJam!
+My mod for the ModJam!

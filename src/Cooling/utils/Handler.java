@@ -1,6 +1,6 @@
-package com.shadows.Cooling.utils;
+package Cooling.utils;
 
-import com.shadows.Cooling.exeptions.NotMyFault;
+import Cooling.exeptions.NotMyFault;
 
 public class Handler {
 

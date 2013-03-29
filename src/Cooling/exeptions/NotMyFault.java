@@ -1,6 +1,6 @@
-package com.shadows.Cooling.exeptions;
+package Cooling.exeptions;
 
-import com.shadows.Cooling.utils.Registry;
+import Cooling.utils.Registry;
 
 public class NotMyFault extends RuntimeException {
 

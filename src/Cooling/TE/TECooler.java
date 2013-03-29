@@ -1,4 +1,4 @@
-package com.shadows.Cooling.TE;
+package Cooling.TE;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
@@ -8,10 +8,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
-
-import com.shadows.Cooling.CoolerRecipes;
-import com.shadows.Cooling.Blocks.BlockCooler;
-
+import Cooling.CoolerRecipes;
+import Cooling.Blocks.BlockCooler;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

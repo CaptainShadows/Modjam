@@ -1,4 +1,4 @@
-package com.shadows.Cooling.utils;
+package Cooling.utils;
 
 public class Registry {
 
@@ -9,7 +9,7 @@ public class Registry {
 	public static final String channel = id;
 
 	// ********************************Locations********************************
-	public static final String sided = "com.shadows.Cooling.sided.";
+	public static final String sided = "Cooling.sided.";
 	public static final String texture = "Cooling:";
 	public static final String GUILoc = "/mods/Cooling/textures/guis/";
 

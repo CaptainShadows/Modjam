@@ -1,15 +1,13 @@
-package com.shadows.Cooling.inv;
+package Cooling.inv;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.ContainerFurnace;
 import net.minecraft.util.StatCollector;
 
 import org.lwjgl.opengl.GL11;
 
-import com.shadows.Cooling.TE.TECooler;
-import com.shadows.Cooling.utils.Registry;
-
+import Cooling.TE.TECooler;
+import Cooling.utils.Registry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -21,7 +19,7 @@ public class GUICooler extends GuiContainer {
 	public GUICooler(InventoryPlayer player, TECooler coolerTE) {
 
 		super(new CoolerC(player, coolerTE));
-        this.CoolerTE = coolerTE;
+		this.CoolerTE = coolerTE;
 	}
 
 	@Override

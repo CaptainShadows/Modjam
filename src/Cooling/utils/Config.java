@@ -1,4 +1,4 @@
-package com.shadows.Cooling.utils;
+package Cooling.utils;
 
 import java.io.File;
 import java.util.logging.Level;
