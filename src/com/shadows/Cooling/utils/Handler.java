@@ -1,10 +1,6 @@
 package com.shadows.Cooling.utils;
 
-import net.minecraft.block.Block;
-
 import com.shadows.Cooling.exeptions.NotMyFault;
-
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class Handler {
 
@@ -14,13 +10,6 @@ public class Handler {
 
 		Recipes();
 
-	}
-
-	// **********************Adding Language stuff*****************
-
-	public static void addBlockL(Block block, String name) {
-		// TODO Auto-generated method stub
-		LanguageRegistry.addName(block, name);
 	}
 
 	// ****************************Adding Recipies**********************
@@ -52,11 +41,11 @@ public class Handler {
 	public static void UnLoadMod() {
 		IsLoaded = false;
 	}
-	
+
 	public static void log(Object s) {
 		System.out.println(s);
 	}
-	
+
 	public static void logName(String s) {
 		System.out.println(Registry.name + " " + s);
 	}
