@@ -25,9 +25,8 @@ public class Registry {
 	public static final String CoolerGUI = GUILoc + "cooler.png";
 	public static final int CoolerID = 0;
 
-	
-    public static final String NBT_TE_OWNER_KEY = "teOwner";
-    public static final String NBT_TE_STATE_KEY = "teState";
-    public static final String NBT_TE_CUSTOM_NAME = "CustomName";
-    public static final String NBT_TE_DIRECTION_KEY = "teDirection";
+	public static final String NBT_TE_OWNER_KEY = "teOwner";
+	public static final String NBT_TE_STATE_KEY = "teState";
+	public static final String NBT_TE_CUSTOM_NAME = "CustomName";
+	public static final String NBT_TE_DIRECTION_KEY = "teDirection";
 }
