@@ -3,7 +3,6 @@ package Cooling;
 import Cooling.Blocks.ModBlocks;
 import Cooling.sided.ServerProxy;
 import Cooling.utils.Config;
-import Cooling.utils.FuelHandler;
 import Cooling.utils.Handler;
 import Cooling.utils.Registry;
 import cpw.mods.fml.common.Mod;
@@ -16,7 +15,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
-import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = Registry.id, name = Registry.name, version = Registry.ver)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
@@ -50,7 +48,6 @@ public class MainClass {
 		Handler.logName("is Loading it's Recipies");
 		Handler.init();
 
-		GameRegistry.registerFuelHandler(new FuelHandler());
 	}
 
 	@PostInit

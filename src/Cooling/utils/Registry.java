@@ -18,10 +18,10 @@ public class Registry {
 	public static final String ServerProxy = sided + "ServerProxy";
 
 	// ********************************Cooler**********************************
-	public static final String coolerUnloc = "Cooler";
+	public static final String coolerUnloc = "cooler";
 	public static final String CoolerTE = "tileCooler";
 	public static final String CoolerTName = "Cooler";
-	public static final String ContainerINV = CoolerTName;
+	public static final String ContainerINV = "inv.Cooler";
 	public static final String CoolerGUI = GUILoc + "cooler.png";
 	public static final int CoolerID = 0;
 
