@@ -6,10 +6,6 @@ public class Handler {
 
     private static boolean IsLoaded = false;
 
-    public static void init() {
-        RecipeHandler.add();
-    }
-
     // *******************************Mod State Check*************************
 
     public static boolean isModLoaded() {

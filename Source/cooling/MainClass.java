@@ -3,6 +3,7 @@ package cooling;
 import cooling.items.ModItems;
 import cooling.utils.Config;
 import cooling.utils.Handler;
+import cooling.utils.RecipeHandler;
 import cooling.utils.Registry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -41,7 +42,7 @@ public class MainClass {
         ModItems.init();
 
         //Init Recipies
-        Handler.init();
+        RecipeHandler.add();
     }
 
     @PostInit
