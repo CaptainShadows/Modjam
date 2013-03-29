@@ -26,7 +26,7 @@ public class Config {
             // *************************Item config's***********************
 
             FeshID = configuration
-                    .getBlock("Flesh Item", 9000,
+                    .getBlock("Flesh Item", 9000 - 256,
                             "Flesh Item Id:").getInt();
 
         }catch(Exception e){
