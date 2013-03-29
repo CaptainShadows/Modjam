@@ -9,6 +9,6 @@ public class ModItems {
     public static Item flesh;
 
     public static void init() {
-        flesh = new ItemFood(Config.FeshID, 4, 0.5F, true);
+        flesh = new ItemFood(Config.FeshID, 4, 0.5F, true).setUnlocalizedName("flesh");
     }
 }

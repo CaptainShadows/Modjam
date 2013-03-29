@@ -9,12 +9,8 @@ public class RecipeHandler {
 
     public static void add() {
         Handler.logName("is Loading it's Recipies");
-        addSRecipe(new ItemStack(ModItems.flesh),
+        
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.flesh),
                 new Object[] { Item.rottenFlesh });
-    }
-
-    private static void addSRecipe(ItemStack output,
-            Object... params) {
-        GameRegistry.addShapelessRecipe(output, params);
     }
 }
