@@ -9,7 +9,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class Config {
 
-    public static int FeshID;
+    public static int fleshID, coolerID;
 
     public static void init(FMLPreInitializationEvent event) {
 
@@ -25,10 +25,14 @@ public class Config {
 
             // *************************Item config's***********************
 
-            FeshID = configuration
-                    .getBlock("Flesh Item", 9000 - 256,
-                            "Flesh Item Id:").getInt();
+            fleshID = configuration.getBlock(
+                    Registry.flesh + " Item", 9000 - 256,
+                    Registry.flesh + " Item Id:").getInt();
 
+            coolerID = configuration.getBlock(
+                    Registry.cooler + " Item", 9001 - 256,
+                    Registry.cooler + " Item Id:").getInt();
+            
         }catch(Exception e){
             FMLLog.log(
                     Level.SEVERE,
