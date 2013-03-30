@@ -11,7 +11,7 @@
 	
 	<target name="build">
 		<copy todir="${dir.development}\mcp\src\minecraft">
-			<fileset dir="${dir.development}\source\Modjam\src" />
+			<fileset dir="${dir.development}\source\Modjam\Source" />
 		</copy>
 		<replace dir="${dir.development}\mcp\src\minecraft" token="@VERSION@" value="${release.mod.version}" />
 	</target>
