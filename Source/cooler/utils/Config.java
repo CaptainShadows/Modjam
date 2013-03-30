@@ -9,7 +9,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class Config {
 
-    public static int fleshID, coolerID;
+    public static int fleshID = 8000, coolerID = 8001;
 
     public static void init(FMLPreInitializationEvent event) {
 
@@ -25,11 +25,11 @@ public class Config {
 
             // *************************Item config's***********************
 
-            fleshID = configuration.getBlock(
+            fleshID = configuration.getItem(
                     Registry.flesh + " Item", 9000 - 256,
                     Registry.flesh + " Item Id:").getInt();
 
-            coolerID = configuration.getBlock(
+            coolerID = configuration.getItem(
                     Registry.cooler + " Item", 9001 - 256,
                     Registry.cooler + " Item Id:").getInt();
             

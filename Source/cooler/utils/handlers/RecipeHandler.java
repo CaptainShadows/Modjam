@@ -11,6 +11,6 @@ public class RecipeHandler {
         Handler.logName("is Loading it's Recipies");
         
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.flesh),
-                new Object[] { Item.rottenFlesh });
+                new Object[] { Item.rottenFlesh, ModItems.cooler });
     }
 }
