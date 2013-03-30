@@ -1,6 +1,5 @@
 package cooler.utils.handlers;
 
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
@@ -21,7 +20,7 @@ public class RecipeHandler {
                 Item.rottenFlesh, cooler });
 
         GameRegistry.addShapedRecipe(cooler, new Object[] {
-                "###", "#X#", "###", '#', Block.snow, 'X',
-                Item.ingotIron });
+                "###", "#X#", "###", '#', Item.snowball,
+                'X', Item.ingotIron });
     }
 }

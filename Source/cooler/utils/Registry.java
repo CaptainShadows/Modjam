@@ -5,7 +5,7 @@ public class Registry {
     // ************************************Mod**********************************
     public static final String id = "cooler";
     public static final String name = "Cooler Mod";
-    public static final String ver = "1";
+    public static final String ver = "1.5";
 
     // ************************************Items**********************************
     public static final String flesh = "Flesh";

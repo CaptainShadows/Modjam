@@ -2,19 +2,16 @@
 {
   "modid": "cooler",
   "name": "Cooler Mod",
-  "description": "Cool down that useless Rotten Flesh into delicius Flesh",
-  "version": "1",
+  "description": "Cool down that useless Rotten Flesh into delicius Flesh.",
+  "credits": "By Captain_Shadows. For the 2013 Modjam",
+  "logoFile": "/mods/cooler/textures/logo/logo.png",
+  "version": "1.5",
   "url": "",
   "updateUrl": "",
-  "authorList": [
-    "Captain_Shadows"
-  ],
-  "credits": "By Captain_Shadows. For the 2013 Modjam",
-  "logoFile": "mods/cooler/textures/logo/logo.png",
-  "screenshots": [
-  ],
-  "parent":"",
+  "authors": [ "Captain_Shadows" ],
+  "screenshots": [ "" ],
   "dependencies": [
+     "mod_MinecraftForge"
   ]
 }
 ]
