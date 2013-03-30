@@ -2,9 +2,10 @@ package cooler;
 
 import cooler.items.ModItems;
 import cooler.utils.Config;
-import cooler.utils.Handler;
-import cooler.utils.RecipeHandler;
 import cooler.utils.Registry;
+import cooler.utils.handlers.Handler;
+import cooler.utils.handlers.LangugeHandler;
+import cooler.utils.handlers.RecipeHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
@@ -33,15 +34,19 @@ public class MainClass {
             Config.init(event);
 
             Handler.LoadMod();
+
+            // Init Items
+            ModItems.init();
+
+            // Load Languages
+            LangugeHandler.loadLanguages();
         }
     }
 
     @Init
     public void load(FMLInitializationEvent event) {
-        //Init Items
-        ModItems.init();
 
-        //Init Recipies
+        // Init Recipies
         RecipeHandler.add();
     }
 

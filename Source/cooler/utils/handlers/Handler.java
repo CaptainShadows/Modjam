@@ -1,6 +1,7 @@
-package cooler.utils;
+package cooler.utils.handlers;
 
 import cooler.exeptions.NotMyFault;
+import cooler.utils.Registry;
 
 public class Handler {
 

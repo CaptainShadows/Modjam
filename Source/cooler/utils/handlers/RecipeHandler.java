@@ -1,4 +1,4 @@
-package cooler.utils;
+package cooler.utils.handlers;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

@@ -9,4 +9,5 @@ public class Registry {
 
     // ********************************Locations********************************
     public static final String texture = id + ":";
+    public static final String lang = "/mods/" + id + "/lang/";
 }

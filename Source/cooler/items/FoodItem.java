@@ -19,6 +19,10 @@ public class FoodItem extends ItemFood {
 
         iconIndex = iconRegister
                 .registerIcon(Registry.texture
-                        + "flesh");
+                        + this.getUnlocalizedName()
+                                .substring(
+                                        this.getUnlocalizedName()
+                                                .indexOf(
+                                                        ".") + 1));
     }
 }
