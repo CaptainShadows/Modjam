@@ -11,8 +11,8 @@ public class ItemCooler extends Item {
 
     public ItemCooler(int par1) {
         super(par1);
-        this.canRepair(false);
-        this.maxStackSize(1);
+        this.setNoRepair();
+        this.setMaxStackSize(1);
         this.setCreativeTab(CreativeTabs.tabMisc);
         this.setMaxDamage(8);
         // TODO Auto-generated constructor stub

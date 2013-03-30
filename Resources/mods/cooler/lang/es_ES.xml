@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties version="1.0">
+	<comment>Archivo de Lenguage en Español (ES)</comment>
+	<entry key="item.Flesh.name">Carne</entry>
+	<entry key="item.Cooler.name">Nevera</entry>
+</properties>
