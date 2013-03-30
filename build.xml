@@ -5,7 +5,7 @@
 	
 	<target name="clean">
 		<delete file="${dir.development}\mcp\src\minecraft\mcmod.info" />
-		<delete dir="${dir.development}\mcp\src\minecraft\cooling" />
+		<delete dir="${dir.development}\mcp\src\minecraft\cooler" />
 		<delete dir="${dir.development}\mcp\reobf\minecraft" />
 	</target>
 	
