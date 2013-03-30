@@ -9,10 +9,11 @@ public class ModItems {
     public static Item flesh, cooler;
 
     public static void init() {
-        flesh = new FoodItem(Config.fleshID, 4, 0.8F)
+        flesh = new FoodItem(Config.fleshID - 256, 4, 0.8F)
                 .setUnlocalizedName(Registry.flesh);
         
-        cooler = new ItemCooler(Config.coolerID)
+        cooler = new ItemCooler(Config.coolerID - 256)
         .setUnlocalizedName(Registry.cooler);
+        cooler.setContainerItem(cooler);
     }
 }

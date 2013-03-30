@@ -32,7 +32,7 @@ public class MainClass {
 
             Handler.logName("is Loading it's configuration");
             Config.init(event);
-
+            
             Handler.LoadMod();
 
             // Init Items

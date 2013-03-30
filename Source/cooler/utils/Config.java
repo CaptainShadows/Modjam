@@ -9,7 +9,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class Config {
 
-    public static int fleshID = 8000, coolerID = 8001;
+    public static int fleshID, coolerID, coolerDamage;
 
     public static void init(FMLPreInitializationEvent event) {
 
@@ -26,13 +26,16 @@ public class Config {
             // *************************Item config's***********************
 
             fleshID = configuration.getItem(
-                    Registry.flesh + " Item", 9000 - 256,
+                    Registry.flesh + " Item", 9000,
                     Registry.flesh + " Item Id:").getInt();
 
             coolerID = configuration.getItem(
-                    Registry.cooler + " Item", 9001 - 256,
+                    Registry.cooler + " Item", 9001,
                     Registry.cooler + " Item Id:").getInt();
-            
+
+            coolerDamage = configuration.get("How many times can you use a " + Registry.cooler,
+                    "You can use it", 8).getInt();
+
         }catch(Exception e){
             FMLLog.log(
                     Level.SEVERE,
