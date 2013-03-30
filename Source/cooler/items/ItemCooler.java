@@ -17,7 +17,6 @@ public class ItemCooler extends Item {
         setNoRepair();
         setCreativeTab(CreativeTabs.tabMisc);
         setMaxDamage(Config.coolerDamage - 1);
-        // TODO Auto-generated constructor stub
     }
 
     @Override
@@ -30,11 +29,7 @@ public class ItemCooler extends Item {
         return itemStack;
     }
 
-    /**
-     * If this returns true, after a recipe involving this item is crafted the
-     * container item will be added to the player's inventory instead of
-     * remaining in the crafting grid.
-     */
+    // Makes the cooler stay on the Crafting Grid
     public boolean doesContainerItemLeaveCraftingGrid(
             ItemStack par1ItemStack) {
         return false;
