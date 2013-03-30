@@ -1,6 +1,6 @@
-package cooling.exeptions;
+package cooler.exeptions;
 
-import cooling.utils.Registry;
+import cooler.utils.Registry;
 
 public class NotMyFault extends RuntimeException {
 

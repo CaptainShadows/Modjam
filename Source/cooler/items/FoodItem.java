@@ -1,8 +1,8 @@
-package cooling.items;
+package cooler.items;
 
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.ItemFood;
-import cooling.utils.Registry;
+import cooler.utils.Registry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -19,6 +19,6 @@ public class FoodItem extends ItemFood {
 
         iconIndex = iconRegister
                 .registerIcon(Registry.texture
-                        + this.getUnlocalizedName());
+                        + "flesh");
     }
 }

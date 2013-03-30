@@ -1,7 +1,7 @@
-package cooling.items;
+package cooler.items;
 
 import net.minecraft.item.Item;
-import cooling.utils.Config;
+import cooler.utils.Config;
 
 public class ModItems {
 

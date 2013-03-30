@@ -1,6 +1,6 @@
-package cooling.utils;
+package cooler.utils;
 
-import cooling.exeptions.NotMyFault;
+import cooler.exeptions.NotMyFault;
 
 public class Handler {
 

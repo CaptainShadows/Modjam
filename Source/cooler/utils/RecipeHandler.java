@@ -1,8 +1,8 @@
-package cooling.utils;
+package cooler.utils;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import cooling.items.ModItems;
+import cooler.items.ModItems;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class RecipeHandler {

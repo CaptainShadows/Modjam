@@ -1,10 +1,10 @@
-package cooling;
+package cooler;
 
-import cooling.items.ModItems;
-import cooling.utils.Config;
-import cooling.utils.Handler;
-import cooling.utils.RecipeHandler;
-import cooling.utils.Registry;
+import cooler.items.ModItems;
+import cooler.utils.Config;
+import cooler.utils.Handler;
+import cooler.utils.RecipeHandler;
+import cooler.utils.Registry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
