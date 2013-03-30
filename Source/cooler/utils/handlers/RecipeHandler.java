@@ -19,8 +19,9 @@ public class RecipeHandler {
                 ModItems.flesh), new Object[] {
                 Item.rottenFlesh, cooler });
 
-        GameRegistry.addShapedRecipe(cooler, new Object[] {
-                "###", "#X#", "###", '#', Item.snowball,
-                'X', Item.ingotIron });
+        GameRegistry.addShapedRecipe(new ItemStack(
+                ModItems.cooler), new Object[] { "###",
+                "#X#", "###", '#', Item.snowball, 'X',
+                Item.ingotIron });
     }
 }
