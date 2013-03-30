@@ -11,7 +11,7 @@ public class ModItems {
     public static void init() {
 
         // Loads Flesh
-        flesh = new FoodItem(Config.fleshID - 256, 4, 0.8F)
+        flesh = new FoodItem(Config.fleshID - 256, 8, 2F)
                 .setUnlocalizedName(Registry.flesh);
 
         // Loads the Cooler

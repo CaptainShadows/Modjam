@@ -2,22 +2,19 @@
 {
   "modid": "cooler",
   "name": "Cooler Mod",
-  "description": "A way to turn rotten flesh in to Food",
-  "version": "0.1",
-  "mcversion": "1.5.1",
+  "description": "Cool down that useless Rotten Flesh into delicius Flesh",
+  "version": "1",
   "url": "",
   "updateUrl": "",
-  "authors": [
-    "captain_shadows"
+  "authorList": [
+    "Captain_Shadows"
   ],
-  "credits": "Created by captain_shadows",
-  "logoFile": "",
+  "credits": "By Captain_Shadows. For the 2013 Modjam",
+  "logoFile": "mods/cooler/textures/logo/logo.png",
   "screenshots": [
   ],
   "parent":"",
-  "requiredMods": [,
-    "Forge",
-    "FML"
+  "dependencies": [
   ]
 }
 ]
