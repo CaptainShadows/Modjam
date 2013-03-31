@@ -8,7 +8,6 @@
 bin/
 tmp/
 PSDs/
-Releases/
 *.tmp
 *.bak
 *.swp
