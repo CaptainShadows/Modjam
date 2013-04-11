@@ -12,14 +12,15 @@ public class NotMyFault extends RuntimeException {
     private String mError;
 
     public NotMyFault(String var1) {
-        this.mError = var1;
+        mError = var1;
     }
 
+    @Override
     public String toString() {
         return "The "
                 + Registry.name
                 + " has a Problem.\nIT'S NOT MY FAULT! Below is how to fix it.\n"
-                + this.mError
+                + mError
                 + "\nDO NOT COME TO ME WITH THIS. YOU CAUSED IT YOURSELF, AND I TOLD YOU HOW TO FIX IT!";
     }
 }

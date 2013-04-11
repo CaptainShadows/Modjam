@@ -9,14 +9,9 @@ public class LangugeHandler {
     public static void loadLanguages() {
 
         for (String localizationFile : Languages.langFiles){
-            LanguageRegistry
-                    .instance()
-                    .loadLocalization(
-                            localizationFile,
-                            LanguageHelper
-                                    .getLocaleFromFileName(localizationFile),
-                            LanguageHelper
-                                    .isXMLLanguageFile(localizationFile));
+            LanguageRegistry.instance().loadLocalization(localizationFile,
+                    LanguageHelper.getLocaleFromFileName(localizationFile),
+                    LanguageHelper.isXMLLanguageFile(localizationFile));
         }
     }
 }

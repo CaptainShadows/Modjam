@@ -8,20 +8,16 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class RecipeHandler {
 
-    private static ItemStack cooler = new ItemStack(
-            ModItems.cooler, 1,
+    private static ItemStack cooler = new ItemStack(ModItems.cooler, 1,
             OreDictionary.WILDCARD_VALUE);
 
     public static void add() {
         Handler.logName("is Loading it's Recipies");
 
-        GameRegistry.addShapelessRecipe(new ItemStack(
-                ModItems.flesh), new Object[] {
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.flesh), new Object[] {
                 Item.rottenFlesh, cooler });
 
-        GameRegistry.addShapedRecipe(new ItemStack(
-                ModItems.cooler), new Object[] { "###",
-                "#X#", "###", '#', Item.snowball, 'X',
-                Item.ingotIron });
+        GameRegistry.addShapedRecipe(new ItemStack(ModItems.cooler), new Object[] { "###", "#X#",
+                "###", '#', Item.snowball, 'X', Item.ingotIron });
     }
 }

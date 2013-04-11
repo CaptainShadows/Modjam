@@ -5,7 +5,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cooler.utils.Config;
-import cooler.utils.Registry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -20,27 +19,23 @@ public class ItemCooler extends Item {
     }
 
     @Override
-    public ItemStack getContainerItemStack(
-            ItemStack itemStack) {
+    public ItemStack getContainerItemStack(ItemStack itemStack) {
 
-        itemStack
-                .setItemDamage(itemStack.getItemDamage() + 1);
+        itemStack.setItemDamage(itemStack.getItemDamage() + 1);
 
         return itemStack;
     }
 
     // Makes the cooler stay on the Crafting Grid
-    public boolean doesContainerItemLeaveCraftingGrid(
-            ItemStack par1ItemStack) {
+    @Override
+    public boolean doesContainerItemLeaveCraftingGrid(ItemStack par1ItemStack) {
         return false;
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void updateIcons(IconRegister iconRegister) {
-
-        iconIndex = iconRegister
-                .registerIcon(Registry.texture
-                        + Registry.cooler);
+    public void registerIcons(IconRegister par1IconRegister) {
+        this.itemIcon = par1IconRegister.registerIcon(this.getUnlocalizedName().substring(
+                this.getUnlocalizedName().indexOf(".") + 1));
     }
 }

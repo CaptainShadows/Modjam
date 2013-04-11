@@ -9,18 +9,14 @@ public class LanguageHelper {
         return fileName.endsWith(".xml");
     }
 
-    public static String getLocaleFromFileName(
-            String fileName) {
+    public static String getLocaleFromFileName(String fileName) {
 
-        return fileName.substring(
-                fileName.lastIndexOf('/') + 1,
-                fileName.lastIndexOf('.'));
+        return fileName.substring(fileName.lastIndexOf('/') + 1, fileName.lastIndexOf('.'));
     }
 
     public static String getLocalizedString(String key) {
 
-        return LanguageRegistry.instance()
-                .getStringLocalization(key);
+        return LanguageRegistry.instance().getStringLocalization(key);
     }
 
 }
