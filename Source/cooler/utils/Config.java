@@ -20,7 +20,7 @@ public class Config {
 
     public static void init(FMLPreInitializationEvent event) {
 
-        File configFile = new File(event.getModConfigurationDirectory(), Registry.name + ".cfg");
+        File configFile = new File(event.getModConfigurationDirectory(), Archive.name + ".cfg");
 
         Configuration configuration = new Configuration(configFile);
 
@@ -28,17 +28,17 @@ public class Config {
             configuration.load();
 
             // *************************Item config's***********************
-            fleshID = configuration.getItem(Registry.flesh + " Item", 9000,
-                    Registry.flesh + " Item Id:").getInt();
+            fleshID = configuration.getItem(Archive.flesh + " Item", 9000,
+                    Archive.flesh + " Item Id:").getInt();
 
-            coolerID = configuration.getItem(Registry.cooler + " Item", 9001,
-                    Registry.cooler + " Item Id:").getInt();
+            coolerID = configuration.getItem(Archive.cooler + " Item", 9001,
+                    Archive.cooler + " Item Id:").getInt();
 
             coolerDamage = configuration.get("General",
-                    "How many times can you use a " + Registry.cooler, 8).getInt();
+                    "How many times can you use a " + Archive.cooler, 8).getInt();
 
         }catch(Exception e){
-            FMLLog.log(Level.SEVERE, e, Registry.name
+            FMLLog.log(Level.SEVERE, e, Archive.name
                     + " has had a problem loading its configuration");
         }finally{
             configuration.save();

@@ -5,13 +5,13 @@
   "description": "Cool down that useless Rotten Flesh into delicius Flesh.",
   "credits": "By Captain_Shadows. For the 2013 Modjam",
   "logoFile": "/mods/cooler/textures/logo/logo.png",
-  "version": "1.5",
+  "version": "1.5.1",
   "url": "",
   "updateUrl": "",
   "authors": [ "Captain_Shadows" ],
   "screenshots": [ "" ],
   "dependencies": [
-     "mod_MinecraftForge"
+     "required-after:Forge@[7.7.1.650,)"
   ]
 }
 ]

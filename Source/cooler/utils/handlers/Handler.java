@@ -1,7 +1,7 @@
 package cooler.utils.handlers;
 
 import cooler.exeptions.NotMyFault;
-import cooler.utils.Registry;
+import cooler.utils.Archive;
 
 public class Handler {
 
@@ -14,7 +14,7 @@ public class Handler {
 
             throw new NotMyFault(
                     "Why did you install my Mod twice? Remove the second Cooler-Universal-"
-                            + Registry.ver
+                            + Archive.ver
                             + ".jar out of your mods-Folder, you need only one of them. And another Question: Why the Hax did Forge not detect that before me?");
 
         }else{
@@ -35,6 +35,6 @@ public class Handler {
     }
 
     public static void logName(String s) {
-        System.out.println(Registry.name + " " + s);
+        System.out.println(Archive.name + " " + s);
     }
 }

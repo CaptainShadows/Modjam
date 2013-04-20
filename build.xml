@@ -1,48 +1,40 @@
 <?xml version="1.0" ?> 
-<project name="Modjam">
+<project name="${dir.modFloder}">
 	
 	<property file="build.properties" />
 	
 	<target name="clean">
-		<delete file="${dir.development}\mcp\src\minecraft\mcmod.info" />
-		<delete dir="${dir.development}\mcp\src\minecraft\cooler" />
-		<delete dir="${dir.development}\mcp\reobf\minecraft" />
+		<delete file="${dir.development}\${dir.mcp}\src\minecraft\mcmod.info" />
+		<delete dir="${dir.development}\${dir.mcp}\src\minecraft\${dir.modPackege}" />
+		<delete dir="${dir.development}\${dir.mcp}\src\minecraft\com" />
+		<delete dir="${dir.development}\${dir.mcp}\reobf\minecraft" />
 	</target>
 	
 	<target name="build">
-		<copy todir="${dir.development}\mcp\src\minecraft">
-			<fileset dir="${dir.development}\source\Modjam\Source" />
+		<copy todir="${dir.development}\${dir.mcp}\src\minecraft">
+			<fileset dir="${dir.development}\source\${dir.modFloder}\${dir.src}" />
 		</copy>
-		<replace dir="${dir.development}\mcp\src\minecraft" token="@VERSION@" value="${release.mod.version}" />
+		<copy todir="${dir.development}\${dir.mcp}\src\minecraft">
+			<fileset dir="${dir.development}\source\${dir.modFloder}\${dir.lib}" />
+		</copy>
+		<replace dir="${dir.development}\${dir.mcp}\src\minecraft" token="@VERSION@" value="${release.mod.majorVersion}.${release.mod.minorVersion}.${release.mod.revision}" />
 	</target>
 	
 	<target name="recompile">
-		<exec dir="${dir.development}\mcp" executable="cmd" os="Windows 7">
+		<exec dir="${dir.development}\${dir.mcp}" executable="cmd" osfamily="windows">
 			<arg line="/c recompile.bat" />
 		</exec>
-		<exec dir="${dir.development}\mcp" executable="cmd" os="Windows 8">
-			<arg line="/c recompile.bat" />
-		</exec>
-		<exec dir="${dir.development}\mcp" executable="bash" os="Linux">
-			<arg line="recompile.sh" />
-		</exec>
-		<exec dir="${dir.development}\mcp" executable="bash" os="Mac OS X">
+		<exec dir="${dir.development}\${dir.mcp}" executable="bash" osfamily="unix">
 			<arg line="recompile.sh" />
 		</exec>
 	</target>
 	
 	<target name="reobfuscate">
-		<exec dir="${dir.development}\mcp" executable="cmd" os="Windows 7">
+		<exec dir="${dir.development}\${dir.mcp}" executable="cmd" osfamily="windows">
 			<arg line="/c reobfuscate_srg.bat" />
 		</exec>
-		<exec dir="${dir.development}\mcp" executable="cmd" os="Windows 8">
-			<arg line="/c reobfuscate_srg.bat" />
-		</exec>
-		<exec dir="${dir.development}\mcp" executable="bash" os="Linux">
-			<arg line="reobfuscate.sh" />
-		</exec>
-		<exec dir="${dir.development}\mcp" executable="bash" os="Mac OS X">
-			<arg line="reobfuscate.sh" />
+		<exec dir="${dir.development}\${dir.mcp}" executable="bash" osfamily="unix">
+			<arg line="reobfuscate_srg.sh" />
 		</exec>
 	</target>
 	
@@ -55,10 +47,10 @@
 		
 		<!-- Build the jar -->
 		<mkdir dir="${dir.release}" />
-		<jar destfile="${dir.release}\Cooler-Universal-${release.mod.version}.jar">
-			<fileset dir="${dir.development}\mcp\src\minecraft\" includes="mcmod.info" />
-			<fileset dir="${dir.development}\mcp\reobf\minecraft\" />
-			<fileset dir="${dir.development}\source\Modjam\Resources"/>
+		<jar destfile="${dir.release}\Cooler-Universal-${release.mod.majorVersion}.${release.mod.minorVersion}.${release.mod.revision}.jar">
+			<fileset dir="${dir.development}\${dir.mcp}\src\minecraft\" includes="mcmod.info" />
+			<fileset dir="${dir.development}\${dir.mcp}\reobf\minecraft\" />
+			<fileset dir="${dir.development}\source\${dir.modFloder}\resources"/>
 		</jar>
 			
 	<!-- Clean up the mcp source now that we are done -->

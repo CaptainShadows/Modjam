@@ -1,6 +1,6 @@
 package cooler.exeptions;
 
-import cooler.utils.Registry;
+import cooler.utils.Archive;
 
 public class NotMyFault extends RuntimeException {
 
@@ -18,7 +18,7 @@ public class NotMyFault extends RuntimeException {
     @Override
     public String toString() {
         return "The "
-                + Registry.name
+                + Archive.name
                 + " has a Problem.\nIT'S NOT MY FAULT! Below is how to fix it.\n"
                 + mError
                 + "\nDO NOT COME TO ME WITH THIS. YOU CAUSED IT YOURSELF, AND I TOLD YOU HOW TO FIX IT!";
