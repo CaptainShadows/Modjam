@@ -1,0 +1,11 @@
+captain=http://i.imgur.com/KY5fYMR.png
+captain=captain_shadows
+clay=https://dl.dropboxusercontent.com/u/129059125/Capes/ClayCape.png
+clay=claycorp
+kat=http://i.imgur.com/ACbnzpL.png
+kat=nerane
+morton=http://i.imgur.com/lBV7Ag4.png
+morton=morton00000
+#Above This Keep
+chip=http://driesgames.game-server.cc/capes/coffee.png
+chip=ChipUK

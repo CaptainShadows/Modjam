@@ -24,7 +24,7 @@ public class MainClass {
 
     @Instance(Archive.id)
     public static MainClass instance;
-    
+
     @SidedProxy(serverSide = Archive.serverProxy, clientSide = Archive.clientProxy)
     public static CommonProxy proxy;
 
@@ -53,7 +53,7 @@ public class MainClass {
 
         // Init Recipies
         RecipeHandler.add();
-        
+
         proxy.initCapes();
     }
 
