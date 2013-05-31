@@ -18,5 +18,5 @@ public class Archive {
     public static final String proxy = id + ".sided.";
     public static final String clientProxy = proxy + "ClientProxy";
     public static final String serverProxy = proxy + "CommonProxy";
-    public static final String capes = "https://raw.github.com/Claycorp/Harvestry/master/capes.txt";
+    public static final String capes = "https://raw.github.com/CaptainShadows/Modjam/test/capes.txt";
 }
